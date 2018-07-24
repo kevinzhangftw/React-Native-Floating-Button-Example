@@ -1,17 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert } from 'react-native';
 import { FloatingAction } from 'react-native-floating-action';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const actions = [{
-  text: 'Accessibility',
+  text: 'Close',
+  // Close icon goes here
   icon: require('./images/close-round.png'),
-  name: 'bt_accessibility',
+  name: 'close-action',
   position: 1
 }];
 
 export default class App extends React.Component {
+  state = {userIcon: null}
 
   render() {
+    // UNCOMMENT THIS LINE TO GET THE ERROR
+    // Icon.getImageSource('user', 20, 'red').then((source) => this.setState({ userIcon: source }))
+
     return (
       <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
